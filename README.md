@@ -1,6 +1,6 @@
 # Free to Use Browser Extension
 
-![Library of Congress Labs Free to Use Browser Extension](free-to-use.jpg "Library of Congress Labs Free to Use Browser Extension")
+![Library of Congress Labs Free to Use Browser Extension](https://code.cog.dog/shared/free-to-use.jpg "Library of Congress Labs Free to Use Browser Extension")
 
 This is a slightly updated version of [the extension created at the Library of Congress](https://labs.loc.gov/work/experiments/free-to-use-browser-extension/) that displays a random public domain image from the Library of Congress every time you open a new browser tab/window.
 
