@@ -25,6 +25,22 @@ The original version was created in 2018 by Flynn Shannon-- see his blog post [E
 6. Open those tabs! (load time can sometimes be slow)
 7. Don't forget to turn off developer mode!
 
+
+## My Work Flow
+If an image catches my eye, these are my steps for going from the image in my browser tab to ultimately find them in the [Flickr Commons](https://flickr.com/commons) (I can do more with Flickr, like use my [Flickr CC Attribution Helper](https://code.cog.dog/flickr-cc-helper/), plus see informative comments)
+
+This requires use of a [browser bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet) that searches flickr commons for any selected or entered text.
+
+1. Drag this link for [Flickr Commons](javascript:(function() %7Bs%3Dwindow.getSelection()%2B%27%27%3Bif(!s) s%3Dprompt(%27Search Flickr Commons public domain licensed Images for...%27,%27%27)%3B if (s) w%3Dwindow.open(%27https://www.flickr.com/search/%3Fw%3Dcommons%26q%3D%27%2BencodeURIComponent(s))%3B%7D)()) to your browser's bookmarks bar
+2. When you find an image that shows up with Free to Use Extension, hover over the image, and click it's title in the bottom left.
+3. This opens up the record in the Library of Congress. This maybe be fine for mos people, but I go further.
+4. Select the key name of people or places in the title.
+5. Click the Flickr Commons bookmarklet
+6. The search results may include one image or several, but most likely you will find the same image.
+
+Go from there.
+
+
 ## Updates
 * v 1.2 delete browser_action{} from manifest.json
 * v 1.1 bumped manifest version in manifest.json from 2 to 3
