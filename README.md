@@ -11,6 +11,8 @@ The original version was created in 2018 by Flynn Shannon-- see his blog post [E
 
 
 ## Blogged
+All my [blog posts tagged FreeToUseExtension](https://cogdogblog.com/tag/freetouseextension/):
+
 * [Instead of Nothingness, Every New Open Tab Becomes a Public Domain Image Doorway of Curiosity](https://cogdogblog.com/2018/09/instead-of-nothingness/) (Sep 18 2018)
 * [Public Domain as the Opener of Glorious Rabbit Holes](https://cogdogblog.com/2021/01/opener-of-rabbit-holes/) (Jan 4 2021)
 * [Knitting a Quick Fix for the Free to Use Browser Extension](https://cogdogblog.com/2023/01/knitting-quick-fix/) (Jan 11 2023)
