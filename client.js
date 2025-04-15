@@ -22,7 +22,9 @@ const twPrefix = 'https://twitter.com/home?status=';
 const bgPrefix = 'rgba(0, 0, 0, 0) url("';
 const bgSuffix = '") no-repeat fixed 50% 50% / cover padding-box';
 const emailPrefix = "mailto:?subject=Exploring%20the%20Library's%20Collections&body="
-const remote = 'https://s3.us-east-2.amazonaws.com/lclabspublicdata/loc-img-browser-extension.json';
+//const remote = 'https://s3.us-east-2.amazonaws.com/lclabspublicdata/loc-img-browser-extension.json';
+// @cogdog switch to use local copy, remote has not changed since 2018
+const remote = 'loc-img-browser-extension.json';
 const local = 'local1.json'
 //const remote = 'pythonEnv/local.json'
 
@@ -40,10 +42,13 @@ $('#rightarrow').click(function() {
   }
 });
 $('#leftarrow').click(function() {
-  var index = recentlyUsed[currentIndex - 1][0]; //index in remote or local file
-  var type = recentlyUsed[currentIndex - 1][1]; //whether it was remote 'r', or local 'l'
-  console.log(index.toString() + ' ' + type);
-  goBack(index, type);
+  if (currentIndex > 0) { 
+		var index = recentlyUsed[currentIndex - 1][0]; //index in remote or local file
+		var type = recentlyUsed[currentIndex - 1][1]; //whether it was remote 'r', or local 'l'
+		console.log(index.toString() + ' ' + type);
+		goBack(index, type);
+	}
+
 });
 
 function goForward() {
@@ -70,7 +75,7 @@ function goBack(index, type) {
   //moves backward through recentlyUsed to change pictures
   if (type === 'l') {
     $.getJSON(local, function(data) {
-      console.log('using remote');
+      console.log('using local');
       console.log(data[index]['imageURL']);
       insertImageURL(data[index]['imageURL']);
       $('#add-info').empty();

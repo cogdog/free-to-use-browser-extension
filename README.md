@@ -4,9 +4,11 @@
 
 This is a slightly updated version of [the extension created at the Library of Congress](https://labs.loc.gov/work/experiments/free-to-use-browser-extension/) that displays a random public domain image from the Library of Congress every time you open a new browser tab/window.
 
-I just love this tool and over the years have made minor changes to one file to keep it working. This repo is just to make my working version available to anyone else.
+I just love this tool and over the years have made minor changes to one file to keep it working. This repo is just to make my working version available to anyone else and where I can figure out, updating.
 
 The original version was created in 2018 by Flynn Shannon-- see his blog post [Explore Historical Images through the Library of Congress Free to Use Browser Extension](https://blogs.loc.gov/thesignal/2018/08/explore-historical-images-through-the-library-of-congress-free-to-use-browser-extension/).
+
+
 
 ## Blogged
 * [Instead of Nothingness, Every New Open Tab Becomes a Public Domain Image Doorway of Curiosity](https://cogdogblog.com/2018/09/instead-of-nothingness/) (Sep 18 2018)
@@ -42,9 +44,35 @@ Go from there.
 
 
 ## Updates
+* v 1.3 downloaded remote data file from Amazon cloud to local (file has not changed since 2018)
 * v 1.2 delete browser_action{} from manifest.json
 * v 1.1 bumped manifest version in manifest.json from 2 to 3
 * v 1.0 original version from Library of Congress
+
+
+## Notes
+I did notice the for periods of time it would report a failure to connect, or an issue with the remote data file. From 'client.js' I noted each time used the extension downloads a ~3Mb jason file from Amazon cloud -- https://s3.us-east-2.amazonaws.com/lclabspublicdata/loc-img-browser-extension.json
+
+With suggestion from D'Arcy Norman, I did a command line:
+```
+curl -I https://s3.us-east-2.amazonaws.com/lclabspublicdata/loc-img-browser-extension.json
+```
+returning
+
+```
+HTTP/1.1 200 OK
+x-amz-id-2: 39RN3hm0GcEe2sLk7+Q0j0mCjFXfpbPg0ghwUXRC55VKBE5hmYj1x8lGE+KTZqsb/Phl1mi/A98=
+x-amz-request-id: ARWHGKBZKSSA89BT
+Date: Mon, 14 Apr 2025 21:03:18 GMT
+Last-Modified: Mon, 10 Dec 2018 19:15:31 GMT
+ETag: "ed60baa564f0bfe0ece7c717ed3f39e3"
+Accept-Ranges: bytes
+Content-Type: application/json
+Content-Length: 3091482
+Server: AmazonS3
+```
+
+meaning it has not been updated since December 2018. I downloaded the file `loc-img-browser-extension.json`  to use in place locally for faster and more reliable access, as of version 1.3
 
 ## Original READme from version 1.0
 

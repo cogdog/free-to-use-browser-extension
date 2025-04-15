@@ -1,8 +1,8 @@
 {
   "name": "Library of Congress Free to Use Extension",
   "manifest_version": 3,
-  "version": "1.2",
-  "description": "Extension sets the background of blank tabs to a photo from the Library of Congress collections that is free to use and reuse. Updated by @cogdog",
+  "version": "1.3",
+  "description": "Extension sets the background of blank tabs to a photo from the Library of Congress collections that is free to use and reuse.",
   "homepage_url": "https://loc.gov",
   "icons": {
     "16": "images/loc16.png",
@@ -11,7 +11,7 @@
     "128": "images/loc128.png",
     "187": "images/loc.png"
   },
-   "permissions": ["activeTab"],
+  "permissions": ["activeTab"],
   "chrome_url_overrides": {
     "newtab": "newtab.html"
   }
